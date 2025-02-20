@@ -1,19 +1,26 @@
 [
-    {
-      "id": 1,
-      "slug": "nextjs-guide",
-      "title": "The Ultimate Guide to Next.js",
-      "summary": "Learn everything about Next.js in this detailed guide.",
-      "content": "This is the full blog content for Next.js guide...",
-      "date": "2025-02-20T12:00:00Z"
-    },
-    {
-      "id": 2,
-      "slug": "tailwind-css",
-      "title": "Why Tailwind CSS is the Future",
-      "summary": "Tailwind CSS offers a unique approach to styling.",
-      "content": "Tailwind CSS allows for faster development...",
-      "date": "2025-02-19T10:00:00Z"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "slug": "nextjs-guide",
+    "title": "The Ultimate Guide to Next.js",
+    "summary": "Learn Next.js in this detailed guide.",
+    "content": "Next.js is a powerful and flexible React framework that enables developers to build fast, scalable, and SEO-friendly web applications with ease. It provides a hybrid static and server-rendered approach, allowing pages to be pre-rendered at build time (static generation) or on each request (server-side rendering). This flexibility makes it ideal for a wide range of use cases, from simple static websites to complex dynamic applications. With built-in features like automatic code splitting, image optimization, and API routes, Next.js simplifies the development process by handling common performance and scalability challenges. Additionally, its seamless integration with React and support for TypeScript, along with an easy-to-use routing system, makes Next.js a popular choice for modern web development.",
+    "date": "2025-02-20T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "slug": "tailwind-css",
+    "title": "Why Tailwind CSS is the Future",
+    "summary": "Tailwind CSS offers a unique approach to styling.",
+    "content": "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to help developers build modern, responsive, and highly customizable user interfaces quickly. Unlike traditional CSS frameworks that come with predefined components, Tailwind allows developers to compose their own designs by applying utility classes directly in HTML or JSX. This approach enhances flexibility, improves maintainability, and reduces the need for writing custom CSS. With features like responsive design, dark mode support, and Just-in-Time (JIT) compilation for optimized performance, Tailwind has become a popular choice among frontend developers for building sleek and scalable web applications.",
+    "date": "2025-02-19T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "slug": "react",
+    "title": "React is that thing",
+    "summary": "Learn React for frontend in unique way.",
+    "content": "React is a popular JavaScript library used for building user interfaces, particularly for single-page applications where dynamic content needs to be rendered efficiently. Developed by Facebook, React allows developers to create reusable UI components that manage their own state, making it easier to build interactive and complex applications. React's virtual DOM efficiently updates and renders only the components that change, which enhances performance and ensures a smooth user experience. With its unidirectional data flow and component-based architecture, React promotes scalability and maintainability. Additionally, React has a vast ecosystem, with tools and libraries like React Router for routing, Redux for state management, and Next.js for server-side rendering, making it one of the most widely used front-end libraries in modern web development.",
+    "date": "2025-02-16T12:00:00Z"
+  }
+]

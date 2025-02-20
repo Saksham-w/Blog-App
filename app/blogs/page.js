@@ -1,11 +1,11 @@
 "use client"; // Enables useState and useEffect in the App Router
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { format } from "date-fns";
 import SearchBar from "@/components/SearchBar";
 import Pagination from "@/components/Pagination";
 import SkeletonLoader from "@/components/SkeletonLoader";
+import BlogCard from "@/components/BlogCard"; // Import the BlogCard component
+import Link from "next/link";
 
 export default function BlogsPage() {
   const [blogs, setBlogs] = useState([]);
@@ -13,7 +13,7 @@ export default function BlogsPage() {
   const [filteredBlogs, setFilteredBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 5;
+  const postsPerPage = 6;
 
   useEffect(() => {
     async function fetchBlogs() {
@@ -46,36 +46,37 @@ export default function BlogsPage() {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Blog Posts</h1>
-      <SearchBar onSearch={setSearchTerm} />
+      <h1 className="text-4xl font-extrabold text-center mb-8 text-gray-800">
+        Blog Posts
+      </h1>
+
+      <div className="flex justify-center mb-6">
+        <SearchBar onSearch={setSearchTerm} />
+      </div>
 
       {loading ? (
-        <SkeletonLoader />
+        <div className="flex justify-center">
+          <SkeletonLoader />
+        </div>
       ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {currentBlogs.length > 0 ? (
-            currentBlogs.map((blog) => (
-              <Link key={blog.id} href={`/blogs/${blog.slug}`}>
-                <div className="p-4 border rounded-lg hover:shadow-lg cursor-pointer transition duration-200">
-                  <h2 className="text-xl font-semibold">{blog.title}</h2>
-                  <p className="text-gray-600 mt-2">{blog.summary}</p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    {format(new Date(blog.date), "MMMM dd, yyyy")}
-                  </p>
-                </div>
-              </Link>
-            ))
+            currentBlogs.map((blog) => <BlogCard key={blog.id} blog={blog} />)
           ) : (
-            <p className="text-center text-gray-500">No posts found.</p>
+            <p className="text-center text-gray-500 col-span-full">
+              No posts found.
+            </p>
           )}
         </div>
       )}
 
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        setCurrentPage={setCurrentPage}
-      />
+      <div className="flex justify-center mt-8">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
     </div>
   );
 }
