@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "slug": "nextjs-guide",
+      "title": "The Ultimate Guide to Next.js",
+      "summary": "Learn everything about Next.js in this detailed guide.",
+      "content": "This is the full blog content for Next.js guide...",
+      "date": "2025-02-20T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "slug": "tailwind-css",
+      "title": "Why Tailwind CSS is the Future",
+      "summary": "Tailwind CSS offers a unique approach to styling.",
+      "content": "Tailwind CSS allows for faster development...",
+      "date": "2025-02-19T10:00:00Z"
+    }
+  ]
+  
