@@ -12,7 +12,6 @@ export default function Pagination({ currentPage, totalPages, setCurrentPage }) 
       <span className="text-lg text-gray-800 dark:text-white">
         Page {currentPage} of {totalPages}
       </span>
-
       <button
         disabled={currentPage === totalPages}
         onClick={() => setCurrentPage(currentPage + 1)}
