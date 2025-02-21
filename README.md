@@ -25,7 +25,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository
 
-git clone https://github.com/your-username/blog-website.git
+git clone https://github.com/Saksham-w/blog-website.git
 cd blog-website
 
 2. Install dependencies

@@ -1,10 +1,10 @@
-"use client"; // Enables useState and useEffect in the App Router
+"use client";
 
 import { useState, useEffect } from "react";
 import SearchBar from "@/components/SearchBar";
 import Pagination from "@/components/Pagination";
 import SkeletonLoader from "@/components/SkeletonLoader";
-import BlogCard from "@/components/BlogCard"; // Import the BlogCard component
+import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 
 export default function BlogsPage() {
@@ -17,7 +17,7 @@ export default function BlogsPage() {
 
   useEffect(() => {
     async function fetchBlogs() {
-      const res = await fetch("/data/blogs.json"); // Fetch data from the public folder
+      const res = await fetch("/data/blogs.json");
       const data = await res.json();
       setBlogs(data);
       setFilteredBlogs(data);
@@ -26,7 +26,6 @@ export default function BlogsPage() {
     fetchBlogs();
   }, []);
 
-  // Debounced Search
   useEffect(() => {
     const timer = setTimeout(() => {
       const filtered = blogs.filter((blog) =>
@@ -38,7 +37,6 @@ export default function BlogsPage() {
     return () => clearTimeout(timer);
   }, [searchTerm, blogs]);
 
-  // Pagination Logic
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentBlogs = filteredBlogs.slice(indexOfFirstPost, indexOfLastPost);

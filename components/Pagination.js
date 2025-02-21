@@ -9,7 +9,6 @@ export default function Pagination({ currentPage, totalPages, setCurrentPage }) 
         Previous
       </button>
 
-      {/* Page number display */}
       <span className="text-lg text-gray-800 dark:text-white">
         Page {currentPage} of {totalPages}
       </span>
